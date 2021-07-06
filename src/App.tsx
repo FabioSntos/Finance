@@ -1,9 +1,11 @@
+import { Dashboard } from "./components/Dashboard/intex";
+import { Header } from "./components/Header";
 const App = () => {
-  console.log('ola');
   return (
-    <div>
-      <h1>Ola mundo</h1>
-    </div>
+    <>
+      <Header />
+      <Dashboard />
+    </>
   );
 };
 
