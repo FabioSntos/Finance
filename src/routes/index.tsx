@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import App from '../App';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import App from "../App";
 
 const Router = () => {
   return (
