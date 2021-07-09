@@ -2,6 +2,10 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { Dashboard } from "./components/Dashboard/intex";
 import { Header } from "./components/Header";
+import NewTransactionModal from "./components/NewTransactionModal";
+
+Modal.setAppElement("#root");
+
 const App = () => {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =
     useState(false);
@@ -16,12 +20,10 @@ const App = () => {
     <>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
-      <Modal
+      <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Cadastrar transação</h2>
-      </Modal>
+      />
     </>
   );
 };
