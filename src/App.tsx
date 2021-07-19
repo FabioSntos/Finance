@@ -3,10 +3,7 @@ import Modal from "react-modal";
 import { Dashboard } from "./components/Dashboard/intex";
 import { Header } from "./components/Header";
 import NewTransactionModal from "./components/NewTransactionModal";
-import {
-  TransactionsContext,
-  TransactionsProvider,
-} from "./TransactionsContext";
+import { TransactionProvider } from "./hooks/useTransactions";
 
 Modal.setAppElement("#root");
 
@@ -21,14 +18,14 @@ const App = () => {
     setIsNewTransactionModalOpen(false);
   }
   return (
-    <TransactionsProvider>
+    <TransactionProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
       <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
       />
-    </TransactionsProvider>
+    </TransactionProvider>
   );
 };
 
