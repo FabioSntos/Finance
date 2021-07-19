@@ -28,7 +28,7 @@ Before starting 🏁, you need to have [Git](https://git-scm.com) and [Node](htt
 $ git clone https://github.com/FabioSntos/Finance.git
 
 # Access
-$ cd dtmoney
+$ cd Finance
 
 # Install dependencies
 $ yarn
