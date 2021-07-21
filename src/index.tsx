@@ -43,7 +43,7 @@ createServer({
 
   routes() {
     //rotas
-    this.namespace = "api"; //ao captar os dados da api pelo front, irá trazer dados a partir do namespace "api"
+    this.namespace = "api";
 
     this.get("/transactions", () => {
       return this.schema.all("transaction");
